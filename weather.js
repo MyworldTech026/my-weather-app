@@ -8,7 +8,7 @@ GOElement.addEventListener('click',()=>{
  const city=inputElement.value.trim()
  if(!city){
 weatherCard.style.display='block'
- weatherCard.textcontent='Enter city name'
+ weatherCard.textContent='Enter city name'
 return
 }
  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`)
