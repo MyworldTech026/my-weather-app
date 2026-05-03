@@ -8,6 +8,7 @@ GOElement.addEventListener('click',()=>{
  const city=inputElement.value.trim()
  if(!city){
 errorAlert.classList.remove('hidden')
+weatherCard.style.display='none'
 errorAlert.innerHTML='please enter city name'
 return
 }
