@@ -6,7 +6,11 @@ const weatherCard=document.querySelector('.js-weather-card')
 const apiKey=`2d9215fab54afdad838eb6ee0f7af02d`
 GOElement.addEventListener('click',()=>{
  const city=inputElement.value.trim()
- if(!city)return
+ if(!city){
+errorAlert.classList.remove('hidden')
+errorAlert.innerHTML='please enter city name'
+return
+}
  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`)
   .then((response)=>{
     if (!response.ok) {
