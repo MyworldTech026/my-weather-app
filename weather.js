@@ -15,7 +15,7 @@ return
  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`)
   .then((response)=>{
     if (!response.ok) {
-      throw new Error('${city} is not a city name')
+      throw new Error( ` ${city} is not a city name ` )
     }
     return response.json()
   })
